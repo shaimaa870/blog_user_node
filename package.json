@@ -6,13 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "heroku-postbuild"  :"NPM_CONFIG_PRODUCTION=false npm install npm "  
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm "
   },
   "author": "shaimaa",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.0",
     "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.11.13",
@@ -21,8 +22,7 @@
   "devDependencies": {
     "nodemon": "^2.0.7"
   },
-  	"engines": {
-    	        "node": "14.15.3"
-    	    }
-    
+  "engines": {
+    "node": "14.15.3"
+  }
 }

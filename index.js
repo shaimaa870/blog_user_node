@@ -3,14 +3,27 @@ const mongoose = require('mongoose');
 const routes = require('./routes');
 
 const app = express();
-const { MONGODB_URI } = process.env;
+const  MONGODB_URI  = "mongodb+srv://shaimaa870:hager123@@iti-db-1.6vyje.mongodb.net/test";
 
-mongoose.connect(MONGODB_URI, { 
-    useNewUrlParser: true,
-    useFindAndModify: false,
-    useUnifiedTopology: true,
-    useCreateIndex: true
-  });
+mongoose.connect(MONGODB_URI,{  useNewUrlParser: true,
+  useCreateIndex: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false} );
+// require("dotenv").config();
+
+// const url = process.env.MONGODB_URI
+// mongoose.connect(url, {
+ 
+// });
+// mongoose.connection
+//   .once("open", function () {
+//     console.log("DB Connected!");
+//   })
+//   .on("error", function (error) {
+//     console.log("Error is: ", error);
+//   });
+   
+ 
 
 app.use(express.json());
 
