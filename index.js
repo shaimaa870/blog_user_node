@@ -3,8 +3,14 @@ const mongoose = require('mongoose');
 const routes = require('./routes');
 
 const app = express();
+const { MONGODB_URI } = process.env;
 
-mongoose.connect('mongodb://localhost:27017/bloggingWebsite', { useUnifiedTopology: true });
+mongoose.connect(MONGODB_URI, { 
+    useNewUrlParser: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true,
+    useCreateIndex: true
+  });
 
 app.use(express.json());
 
